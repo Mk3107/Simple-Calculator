@@ -1,0 +1,51 @@
+/* MY Project,Manish Kumar
+   Simple Calculator */
+   
+ #include <stdio.h>
+ int main()
+ {
+     // Now we will declare variables
+     int n1,n2;
+     char opt;    // opt means operator
+     float calculate; 
+     printf("SELECT AN OPERATOR(+,-,*,/) TO PERFORM CALCULATION \n");
+     scanf("%c",&opt); // It will take OPERATOR
+     printf("Enter First Number:-");
+     scanf("%d",&n1); // It will Take First Number
+     printf("Enter Second Number:-");
+     scanf("%d",&n2);  // It will Take second Number
+     
+     if(opt=='+')
+     {
+         calculate=n1+n2; //It will Add two Numbers
+         printf("The Addition of %d and %d is:-%f",n1,n2,calculate);
+        }
+        
+        else if (opt=='-')
+        {
+         calculate=n1-n2; //It will Subtract Two Numbers
+         printf("The Subtraction of %d and %d is:-%f",n1,n2,calculate);
+         }
+         
+         else if (opt=='*')
+         {
+        calculate=n1*n2; // It will Multiply Two Numbers
+        printf("The Multiplication of %d and %d is:-%f",n1,n2,calculate);
+         }
+         
+         else if (opt=='/')
+    {  
+        if (n2==0)   // if n2 == 0, It will Take another Number
+        {  
+            printf (" \n Since Divisor cannot be zero,So  Please enter another number ");  
+            scanf ("%d", &n2);        
+        }  
+        calculate = n1 / n2; // divide two numbers  
+        printf ("The Division of %d and %d is: %.2f", n1,n2,calculate);  
+    }  
+    else  
+    {  
+        printf(" \n You have entered the wrong inputs ");  
+    }  
+    return 0;  
+     
